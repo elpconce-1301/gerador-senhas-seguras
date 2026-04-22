@@ -10,7 +10,7 @@ from password_generator import PasswordGenerator
 
 
 def print_header():
-    """Exibe o cabeçalho da aplicação."""
+    """Exibe o cabeçalho da aplicação com formatação visual."""
     print("\n" + "=" * 50)
     print("    GERADOR DE SENHAS SEGURAS")
     print("=" * 50 + "\n")
@@ -30,15 +30,18 @@ def get_password_length() -> int:
         try:
             length = input("Digite o tamanho da senha (4-128): ").strip()
             if not length:
-                print("⚠️  Digite um valor válido!")
+                print("⚠️  Comprimento deve ser um número inteiro")
                 continue
             length = int(length)
-            if length < 4 or length > 128:
-                print("⚠️  O tamanho deve estar entre 4 e 128 caracteres!")
+            if length < 4:
+                print("⚠️  Comprimento mínimo é 4 caracteres")
+                continue
+            if length > 128:
+                print("⚠️  Comprimento máximo é 128 caracteres")
                 continue
             return length
         except ValueError:
-            print("⚠️  Digite um número válido!")
+            print("⚠️  Comprimento deve ser um número inteiro")
 
 
 def get_character_options() -> dict:
@@ -142,7 +145,7 @@ def main():
 
             # Perguntar se deseja gerar outra senha
             again = input("Deseja gerar outra senha? (S/N): ").strip().upper()
-            if again not in ["S", "SIM", "Y", "YES"]:
+            if again in ["N", "NÃO", "NO"]:
                 print("\n✓ Obrigado por usar o Gerador de Senhas Seguras!")
                 print("Até logo!\n")
                 break

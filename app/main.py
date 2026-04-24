@@ -6,7 +6,12 @@ Permite personalizar o tamanho e os tipos de caracteres inclusos.
 """
 
 import sys
-from .password_generator import PasswordGenerator
+
+# Permite execução tanto como módulo (python -m app.main) quanto como script
+try:
+    from .password_generator import PasswordGenerator
+except ImportError:
+    from password_generator import PasswordGenerator
 
 
 def print_header():

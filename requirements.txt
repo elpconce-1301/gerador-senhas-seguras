@@ -1,0 +1,16 @@
+# Gerador de Senhas Seguras - Dependências de Produção
+# 
+# Este projeto utiliza APENAS bibliotecas padrão do Python (stdlib).
+# Nenhuma dependência externa é necessária para executar a aplicação.
+#
+# Bibliotecas padrão utilizadas:
+# - random: Geração de números e escolhas aleatórias
+# - string: Constantes de caracteres (maiúsculas, minúsculas, dígitos)
+# - sys: Controle de saída e interrupção do programa
+# - os: Operações do sistema operacional (portabilidade)
+# - unittest: Framework para testes unitários
+#
+# Python versão mínima necessária: 3.6+
+
+# Dependências de produção (nenhuma)
+# Este projeto não possui dependências externas.

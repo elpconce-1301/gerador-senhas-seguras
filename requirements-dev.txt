@@ -1,0 +1,31 @@
+# Gerador de Senhas Seguras - Dependências de Desenvolvimento
+#
+# Este arquivo contém dependências opcionais para desenvolvimento,
+# testes avançados, formatação e análise de código.
+#
+# Instale com:
+#   pip install -r requirements-dev.txt
+#
+
+# Qualidade e Linting
+pylint==3.0.3              # Análise estática de código
+flake8==7.0.0              # Verificador de estilo PEP8
+black==24.1.1              # Formatador de código automático
+isort==5.13.2              # Organizador de imports
+
+# Testes e Cobertura
+pytest==7.4.4              # Framework de testes alternativo ao unittest
+pytest-cov==4.1.0          # Plugin pytest para cobertura de código
+coverage==7.4.1            # Análise de cobertura de testes
+
+# Type Checking
+mypy==1.8.0                # Verificador estático de tipos
+types-all==1.0.0           # Stubs de tipos para bibliotecas padrão
+
+# Documentação
+sphinx==7.2.6              # Gerador de documentação
+sphinx-rtd-theme==2.0.0    # Tema Read the Docs para Sphinx
+
+# Ferramentas Gerais
+twine==4.1.1               # Utilitário para publicar pacotes no PyPI
+build==1.1.1               # Ferramenta para construir distribuições Python

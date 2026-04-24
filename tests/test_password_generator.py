@@ -12,7 +12,7 @@ import os
 # Adicionar o diretório pai ao path para importar o módulo
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from password_generator import PasswordGenerator
+from app.password_generator import PasswordGenerator
 
 
 class TestPasswordGenerator(unittest.TestCase):

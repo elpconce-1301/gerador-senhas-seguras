@@ -26,7 +26,10 @@ desenvolvido com auxílio do GitHub Copilot, para fins acadêmicos.
 - Como o GitHub Copilot (IA generativa) foi utilizado
 
 ## Estrutura Esperada
-- main.py
-- password_generator.py
+- app/
+  - __init__.py
+  - main.py
+  - password_generator.py
 - tests/
+- docs/
 - README.md

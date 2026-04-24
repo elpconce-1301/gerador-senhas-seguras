@@ -29,12 +29,19 @@ Aplicação CLI (Command Line Interface) em Python para gerar senhas aleatórias
 
 ```
 gerador-senhas-seguras/
-├── main.py                          # Interface CLI principal
-├── password_generator.py            # Módulo de geração de senhas
+├── app/
+│   ├── __init__.py
+│   ├── main.py                      # Interface CLI principal
+│   └── password_generator.py        # Módulo de geração de senhas
 ├── tests/
 │   ├── __init__.py
 │   └── test_password_generator.py   # Testes unitários
+├── docs/
+├── prompts/
 ├── PROJECT_SPEC.md                  # Especificações do projeto
+├── requirements.txt                 # Dependências de produção
+├── requirements-dev.txt             # Dependências de desenvolvimento
+├── Makefile                         # Automação de tarefas
 └── README.md                        # Este arquivo
 ```
 
@@ -45,13 +52,19 @@ gerador-senhas-seguras/
 Navegue até o diretório do projeto e execute:
 
 ```bash
-python main.py
+python -m app.main
 ```
 
 Ou:
 
 ```bash
-python3 main.py
+python3 -m app.main
+```
+
+Você também pode usar o Makefile:
+
+```bash
+make run
 ```
 
 A aplicação será iniciada com uma interface interativa no terminal, solicitando:
@@ -77,6 +90,13 @@ Para teste com saída detalhada:
 
 ```bash
 python -m unittest tests.test_password_generator -v
+```
+
+Você também pode usar o Makefile:
+
+```bash
+make test       # Executar testes
+make test-verbose   # Executar com saída detalhada
 ```
 
 ## Exemplo de Uso

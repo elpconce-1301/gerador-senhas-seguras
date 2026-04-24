@@ -133,3 +133,6 @@ dmypy.json
 # Project specific
 *.tmp
 *.bak
+
+# Diagrams (working files)
+docs/*.mmd
